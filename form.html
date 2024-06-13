@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* .tudo {
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 90vh;
+    } */
+
+    h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .box input {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        margin: 5px;
+        border: none;
+        border-bottom: 2px  solid black;
+        outline: none;
+    }
+
+    #resCadastro{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        margin-left: 800px;
+        margin-right: 800px;
+        height: 150px;
+        border-radius: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        
+    }
+</style>
+
+<body>
+    <h1>Buscando Dados</h1>
+    <div class="tudo">
+        <form class="box">
+            <input type="text" id="Nome" placeholder="Nome">
+            <input type="text" id="NomedeUsuario" placeholder="Nome de Usuario">
+            <input type="email" id="Email" placeholder="Email">
+            <input type="password" id="Senha" placeholder="Senha">
+            <input type="text" id="Endereço" placeholder="Endereço">
+            <input type="number" id="Cpf" placeholder="Cpf">
+            <div>
+                <label for="">Data de Nascimento</label>
+                <input type="date" id="DatadeNascimento">
+            </div>
+            <div>
+                Sexo:
+                <select>
+                    <option>--</option>
+                    <option>
+                        Masculino
+                    </option>
+                    <option>
+                        Feminino
+                    </option>
+                    <option>
+                        Outro
+                    </option>
+                </select>
+            </div>
+        </form>
+        <div id="btn">
+            <input type="button" value="Cadastre-se" onclick="cadastro()">
+        </div>
+    </div>
+    <div id="resCadastro"></div>
+    
+    <script>
+        function cadastro(){
+            var Nome = document.getElementById('Nome').value;
+            var NomedeUsuario = document.getElementById('NomedeUsuario').value;
+            var Email = document.getElementById('Email').value;
+            var Endereço = document.getElementById('Endereço').value;
+            var Cpf = document.getElementById('Cpf').value;
+            var DatadeNascimento = document.getElementById('DatadeNascimento').value;
+
+            resCadastro.innerHTML = `nome é: ${Nome} <br> Nome de usuario é: ${NomedeUsuario} <br> 
+            seu email: ${Email} <br> Seu endereço é: ${Endereço} <br> Seu cpf: ${Cpf} <br> Data de Nascimento: ${DatadeNascimento}`
+
+            console.log(resCadastro);
+        }
+    </script>
+</body>
+
+</html>
